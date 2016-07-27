@@ -65,7 +65,6 @@ public class GeneDiversityGenerator {
     aminoIndex = random.nextInt(high - low) + low;
     
     // find new amino acid
-    
     String possibleAA = "arndbcqezghilkmfpstwyv";
     char newAA = possibleAA.charAt(random.nextInt(possibleAA.length()));
     
@@ -75,10 +74,7 @@ public class GeneDiversityGenerator {
     // convert to string
     String temp = vmat2List.toString().replaceAll(", |\\[|\\]", "");
     
-    // increment will indicate how many sequences are in queue
-    //increment = (queue.size());
-    
-    // add sequence to queue
+    // add sequence to list
     populationList.add(temp);
     
     }
@@ -101,6 +97,7 @@ public class GeneDiversityGenerator {
     
     // add sequence to list
     populationList.add(temp);
+    
   }
   
   public static void addAminoAcid() {
@@ -143,6 +140,9 @@ public class GeneDiversityGenerator {
   
   public static void mutate() {
     
+    
+    // mutate algorithm values are open to change based on biological date
+    // current numbers are mainly to note code is behaving correctly with outputted sequences
     int min = 0;
     int max = 10;
     
