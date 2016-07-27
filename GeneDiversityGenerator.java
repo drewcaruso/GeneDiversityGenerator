@@ -46,7 +46,6 @@ public class GeneDiversityGenerator {
     
     mutate();
 
-    // this will be at the end, when print out all the mutated sequences
     for (int i = 0; i < populationList.size(); i++) {
       System.out.println(populationList.get(i) + "\n");
     }
@@ -55,8 +54,6 @@ public class GeneDiversityGenerator {
   }
 
     public static void changeAminoAcid() {
-    
-    //Random random = new Random();
     
     // find index to alter
     int low, high, aminoIndex; // low and high are used to find aminoIndex to change
@@ -90,6 +87,8 @@ public class GeneDiversityGenerator {
     
     // convert to ArrayList to delete index
     ArrayList<Character> vmat2List = new ArrayList<Character>(Arrays.asList(vmat2Array));
+    
+    // remove randomized amino acid
     vmat2List.remove(aminoIndex);
     
     // convert to string
@@ -141,7 +140,7 @@ public class GeneDiversityGenerator {
   public static void mutate() {
     
     
-    // mutate algorithm values are open to change based on biological date
+    // mutate algorithm values are open to change based on biological data
     // current numbers are mainly to note code is behaving correctly with outputted sequences
     int min = 0;
     int max = 10;
