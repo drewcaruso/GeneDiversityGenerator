@@ -6,8 +6,6 @@ public class GeneDiversityGenerator {
   
   static List<String> populationList = new ArrayList<String>();
   
-  static int increment; //will be used to see how many sequences held in queue
-  
   // MSF domain located at index 129-470
   
     static Character [] vmat2Array = {
@@ -70,35 +68,6 @@ public class GeneDiversityGenerator {
     
     String possibleAA = "arndbcqezghilkmfpstwyv";
     char newAA = possibleAA.charAt(random.nextInt(possibleAA.length()));
-    
-    /* chart for reference
-     * Charged:
-     * Arginine - Arg - R 
-     * Lysine - Lys - K 
-     * Aspartic acid - Asp - D 
-     * Glutamic acid - Glu - E 
-
-     Polar (may participate in hydrogen bonds):
-     * Glutamine - Gln - Q 
-     * Asparagine - Asn - N 
-     * Histidine - His - H 
-     * Serine - Ser - S 
-     * Threonine - Thr - T 
-     * Tyrosine - Tyr - Y 
-     * Cysteine - Cys - C 
-     * Methionine - Met - M 
-     * Tryptophan - Trp - W 
-
-     Hydrophobic (normally buried inside the protein core):
-     * Alanine - Ala - A 
-     * Isoleucine - Ile - I 
-     * Leucine - Leu - L 
-     * Phenylalanine - Phe - F 
-     * Valine - Val - V 
-     * Proline - Pro - P 
-     * Glycine - Gly - G
-     
-     */
     
     // convert array to ArrayList
     ArrayList<Character> vmat2List = new ArrayList<Character>(Arrays.asList(vmat2Array));
